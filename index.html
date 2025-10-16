@@ -23,35 +23,35 @@
     <div id="tab1" class="tab active">
       <div class="iframe-container">
         <iframe src="https://shadow-proxy-e7g7.onrender.com" title="Shadow-Proxy"></iframe>
-        <button type="button" onclick="openEmbed('https://shadow-proxy-e7g7.onrender.com')">Open</button>
+        <button type="button" class="open-btn" onclick="openEmbed('https://shadow-proxy-e7g7.onrender.com')">Open</button>
       </div>
     </div>
 
     <div id="tab2" class="tab">
       <div class="iframe-container">
         <iframe src="https://www.wikipedia.org" title="Gallery"></iframe>
-        <button type="button" onclick="openEmbed('https://www.wikipedia.org')">Open</button>
+        <button type="button" class="open-btn" onclick="openEmbed('https://www.wikipedia.org')">Open</button>
       </div>
     </div>
 
     <div id="tab3" class="tab">
       <div class="iframe-container">
         <iframe src="https://demonlord-hitboy.vip" title="Google Site"></iframe>
-        <button type="button" onclick="openEmbed('https://demonlord-hitboy.vip')">Open</button>
+        <button type="button" class="open-btn" onclick="openEmbed('https://demonlord-hitboy.vip')">Open</button>
       </div>
     </div>
 
     <div id="tab4" class="tab">
       <div class="iframe-container">
         <iframe src="https://darknexusarcade.org" title="DarkNexusArcade"></iframe>
-        <button type="button" onclick="openEmbed('https://darknexusarcade.org')">Open</button>
+        <button type="button" class="open-btn" onclick="openEmbed('https://darknexusarcade.org')">Open</button>
       </div>
     </div>
     
     <div id="tab5" class="tab">
       <div class="iframe-container">
         <iframe src="https://github.com/hitboyxx23-dev" title="GitHub"></iframe>
-        <button type="button" onclick="openEmbed('https://github.com/hitboyxx23-dev')">Open</button>
+        <button type="button" class="open-btn" onclick="openEmbed('https://github.com/hitboyxx23-dev')">Open</button>
       </div>
     </div>
   </section>
@@ -61,7 +61,7 @@
   </footer>
 
   <script>
-    // Tab switching functionality
+    // Tab functionality
     const buttons = document.querySelectorAll('.tab-button');
     const tabs = document.querySelectorAll('.tab');
 
@@ -74,7 +74,7 @@
       });
     });
 
-    // Open in new tab when button is clicked
+    // Open in new tab when "Open" button clicked
     function openEmbed(url) {
       window.open(url, '_blank');
     }
