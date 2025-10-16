@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tabbed Sakura Layout</title>
+  <title>🌸 Cleverr 🌸</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,54 +14,54 @@
   <nav class="tabs">
     <button class="tab-button active" data-tab="tab1">Shadow-Proxy</button>
     <button class="tab-button" data-tab="tab2">Gallery</button>
-    <button class="tab-button" data-tab="tab3">google site</button>
-    <button class="tab-button" data-tab="tab4">darknexusarcade</button>
-    <button class="tab-button" data-tab="tab5">github</button>
+    <button class="tab-button" data-tab="tab3">Google Site</button>
+    <button class="tab-button" data-tab="tab4">DarkNexusArcade</button>
+    <button class="tab-button" data-tab="tab5">GitHub</button>
   </nav>
 
   <section class="tab-content">
     <div id="tab1" class="tab active">
       <div class="iframe-container">
-        <iframe src="https://shadow-proxy-e7g7.onrender.com" title="Home"></iframe>
-        <a href="https://shadow-proxy-e7g7.onrender.com" target="_blank" class="open-btn">Open in New Tab</a>
+        <iframe src="https://shadow-proxy-e7g7.onrender.com" title="Shadow-Proxy"></iframe>
+        <button type="button" onclick="openEmbed('https://shadow-proxy-e7g7.onrender.com')">Open</button>
       </div>
     </div>
 
     <div id="tab2" class="tab">
       <div class="iframe-container">
         <iframe src="https://www.wikipedia.org" title="Gallery"></iframe>
-        <a href="https://www.wikipedia.org" target="_blank" class="open-btn">Open in New Tab</a>
+        <button type="button" onclick="openEmbed('https://www.wikipedia.org')">Open</button>
       </div>
     </div>
 
     <div id="tab3" class="tab">
       <div class="iframe-container">
-        <iframe src="https://demonlord-hitboy.vip" title="About"></iframe>
-        <a href="https://demonlord-hitboy.vip" target="_blank" class="open-btn">Open in New Tab</a>
+        <iframe src="https://demonlord-hitboy.vip" title="Google Site"></iframe>
+        <button type="button" onclick="openEmbed('https://demonlord-hitboy.vip')">Open</button>
       </div>
     </div>
+
     <div id="tab4" class="tab">
       <div class="iframe-container">
-        <iframe src="https://darknexusarcade.org" title="About"></iframe>
-        <a href="https://darknexusarcade.org" target="_blank" class="open-btn">Open in New Tab</a>
+        <iframe src="https://darknexusarcade.org" title="DarkNexusArcade"></iframe>
+        <button type="button" onclick="openEmbed('https://darknexusarcade.org')">Open</button>
       </div>
     </div>
     
     <div id="tab5" class="tab">
       <div class="iframe-container">
-        <iframe src="https://github.com/hitboyxx23-dev" title="About"></iframe>
-        <a href="https://github.com/hitboyxx23-dev" target="_blank" class="open-btn">Open in New Tab</a>
+        <iframe src="https://github.com/hitboyxx23-dev" title="GitHub"></iframe>
+        <button type="button" onclick="openEmbed('https://github.com/hitboyxx23-dev')">Open</button>
       </div>
     </div>
   </section>
 
-  <!-- 🌸 Footer Credits -->
   <footer>
     <p>Made with 💜 by <span class="credit-name">HitBoy</span> | Theme: Sakura Night</p>
   </footer>
 
   <script>
-    // Tab functionality
+    // Tab switching functionality
     const buttons = document.querySelectorAll('.tab-button');
     const tabs = document.querySelectorAll('.tab');
 
@@ -73,6 +73,11 @@
         document.getElementById(btn.dataset.tab).classList.add('active');
       });
     });
+
+    // Open in new tab when button is clicked
+    function openEmbed(url) {
+      window.open(url, '_blank');
+    }
   </script>
 </body>
 </html>
