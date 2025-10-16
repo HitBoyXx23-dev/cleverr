@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tabbed Sakura Layout</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🌸 Cleverr 🌸</h1>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-button active" data-tab="tab1">Shadow-Proxy</button>
+    <button class="tab-button" data-tab="tab2">Gallery</button>
+    <button class="tab-button" data-tab="tab3">About</button>
+  </nav>
+
+  <section class="tab-content">
+    <div id="tab1" class="tab active">
+      <div class="iframe-container">
+        <iframe src="https://shadow-proxy-e7g7.onrender.com" title="Home"></iframe>
+        <a href="https://shadow-proxy-e7g7.onrender.com" target="_blank" class="open-btn">Open in New Tab</a>
+      </div>
+    </div>
+
+    <div id="tab2" class="tab">
+      <div class="iframe-container">
+        <iframe src="https://www.wikipedia.org" title="Gallery"></iframe>
+        <a href="https://www.wikipedia.org" target="_blank" class="open-btn">Open in New Tab</a>
+      </div>
+    </div>
+
+    <div id="tab3" class="tab">
+      <div class="iframe-container">
+        <iframe src="https://openai.com" title="About"></iframe>
+        <a href="https://openai.com" target="_blank" class="open-btn">Open in New Tab</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌸 Footer Credits -->
+  <footer>
+    <p>Made with 💜 by <span class="credit-name">HitBoy</span> | Theme: Sakura Night</p>
+  </footer>
+
+  <script>
+    // Tab functionality
+    const buttons = document.querySelectorAll('.tab-button');
+    const tabs = document.querySelectorAll('.tab');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        tabs.forEach(t => t.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
